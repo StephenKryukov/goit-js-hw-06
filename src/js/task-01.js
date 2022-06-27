@@ -13,14 +13,14 @@
 // Category: Technologies
 // Elements: 5
 
-const findNumberOfCategories = document.querySelectorAll(".item").length;
-console.log("Number of categories: ", findNumberOfCategories);
+const NumberOfCategories = document.querySelectorAll(".item").length;
+console.log("Number of categories: ", NumberOfCategories);
 console.log("");
 
 const listItemsEl = document.querySelectorAll(".item");
 //console.log(listItemsEl);
 
-const abc2 = listItemsEl.forEach((element) => {
+const showlistItemsEl = listItemsEl.forEach((element) => {
   console.log(`Category: ${element.querySelector("h2").textContent}`);
   console.log(`Elements: ${element.querySelectorAll("li").length}`);
   console.log("");
