@@ -23,10 +23,12 @@ const images = [
 
 const galleryEl = document.querySelector(".gallery");
 
-const makeGalleryCard = ({url, alt} = {}) => {
-  return `<li class="item"><img class="image" src="${url}" alt="${alt}" width = "300"></li>`;
-};
+const galleryLiElements = images
+  .map(
+    (image) =>
+      `<li class="item"><img class="image" src="${image.url}" alt="${image.alt}" width = "300"></li>`
+  )
+  .join("");
+//console.log(galleryLiElements);
 
-const galleryLiElements = images.map(makeGalleryCard).join("");
-
-galleryEl.insertAdjacentHTML("beforeend", galleryLiElements);
+galleryEl.insertAdjacentHTML("afterbegin", galleryLiElements);
