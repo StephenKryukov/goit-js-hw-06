@@ -18,6 +18,7 @@ const onFormSubmit = (event) => {
 
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
+    return;
     //return alert("Please fill in all the fields!");
   }
 
